@@ -23,7 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void videoInitialize() async {
     /// todo-02-init-03: instantiating the video controller and disposing the previous one
     final previousVideoController = controller;
-    final videoController = VideoPlayerController.asset("assets/butterfly.mp4");
+    final videoController = VideoPlayerController.network(
+      "https://github.com/dicodingacademy/assets/releases/download/release-video/VideoDicoding.mp4",
+    );
 
     /// todo-05-url-01: if video source from url
     // final videoController = VideoPlayerController.network(
